@@ -1,0 +1,100 @@
+@import 'vars'
+
+//——————————————————————————————————————————————————
+// Global Styles
+//——————————————————————————————————————————————————
+
+// Basic settings:
+body
+	min-width: 320px
+
+	font: 400 16px / 1.5 $default-font
+	color: $main-color
+
+h1,
+h2,
+h3
+	font-family: $title-font
+
+h2
+	max-width: 750px
+	margin: 0 auto 110px
+
+	font-size: 40px
+
+ul
+	margin: 0
+	padding-left: 0
+
+	li
+		list-style: none
+
+input,
+textarea,
+select
+	-webkit-appearance: none
+	border-radius: 0
+
+input,
+textarea,
+button
+	&:focus
+		outline: none
+
+textarea
+	resize: none
+
+button
+	border: none
+
+a:hover
+	text-decoration: none
+
+::placeholder
+	color: #777
+	opacity: 1
+
+:focus::placeholder
+	color: transparent
+
+::selection
+	color: $main-color
+	background-color: $accent-color
+
+// Extra classes:
+.container
+	width: 100%
+	max-width: 1170px
+	margin:
+		right: auto
+		left: auto
+	padding:
+		right: $gutter / 2
+		left: $gutter / 2
+
+.of-hidden
+	overflow: hidden
+
+.img-fluid
+	display: block
+
+	max-width: 100%
+	height: auto
+
+// Extentions:
+%s-base
+	position: relative
+	padding:
+		top: 145px
+		bottom: 145px
+
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: calc(50% - .5px)
+
+		width: 1px
+		height: 125px
+
+		background-color: $accent-color
