@@ -3,6 +3,137 @@
 @import 'libs'
 @import 'base'
 
+//——————————————————————————————————————————————————
+// Section: Header
+//——————————————————————————————————————————————————
+
+.header
+	@extend %main-bg
+
+	height: 100vh
+	min-height: 850px
+	max-height: 1200px
+	padding-top: 14%
+
+	text-align: center
+
+	h1
+		max-width: 750px
+		margin: 0 auto 25px
+		padding: 50px 0
+
+		font-size: 55px
+		line-height: 1.6
+
+		border: 1px solid $border-color
+
+		span
+			color: $accent-color
+
+	&-services
+		a
+			position: relative
+
+			font-size: 13px
+			text-transform: uppercase
+			color: $main-color
+			+transition(color)
+
+			&:hover
+				color: $hover-color
+
+			&:not(:last-child)
+				margin-right: 30px
+
+				&::after
+					content: ''
+					position: absolute
+					top: 2px
+					right: -17px
+
+					width: 2px
+					height: 15px
+
+					background-color: $hover-color
+
+	&-scroll
+		display: inline-block
+		margin-bottom: 4%
+
+		svg
+			display: block
+			width: 20px
+			height: 20px
+
+			fill: $accent-color
+			+transition(fill)
+
+		&:hover
+			svg
+				fill: $hover-color
+
+.bottom-line
+	position: absolute
+	bottom: 30px
+	left: 0
+	width: 100%
+
+	&-inner
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+.site-logo
+	width: 45px
+	height: 45px
+
+	font-size: 25px
+	text-transform: uppercase
+	line-height: 42px
+	color: $accent-color
+
+	border-radius: 50%
+	border: 2px solid $accent-color
+	+transition(all)
+
+	&:hover
+		color: $hover-color
+		border-color: $hover-color
+
+.details-link
+	font-size: 14px
+	font-weight: 600
+	text-transform: uppercase
+	color: $main-color
+	+transition(color)
+
+	svg
+		width: 18px
+		height: 13px
+		margin-top: -3px
+		padding-left: 5px
+
+		fill: $accent-color
+		+transition(fill)
+
+	&:hover
+		color: $hover-color
+
+		svg
+			fill: $hover-color
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @import 'media'

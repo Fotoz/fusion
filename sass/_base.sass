@@ -15,12 +15,14 @@ h1,
 h2,
 h3
 	font-family: $title-font
+	font-weight: 400
 
-h2
-	max-width: 750px
-	margin: 0 auto 110px
+// h2
+// 	max-width: 750px
+// 	margin: 0 auto 110px
 
-	font-size: 40px
+// 	font-size: 40px
+// 	text-align: center
 
 ul
 	margin: 0
@@ -82,6 +84,24 @@ a:hover
 	height: auto
 
 // Extentions:
+%main-bg
+	position: relative
+	z-index: 10
+
+	background: url(../images/main-bg.jpg) center / cover no-repeat
+
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -10
+
+		width: 100%
+		height: 100%
+
+		background-color: rgba($bg-color, .9)
+
 %s-base
 	position: relative
 	padding:
@@ -98,3 +118,7 @@ a:hover
 		height: 125px
 
 		background-color: $accent-color
+
+// Mixins:
+=transition($property)
+	transition: $property .15s linear
