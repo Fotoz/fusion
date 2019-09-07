@@ -1,31 +1,81 @@
-@import 'vars'
-
 //——————————————————————————————————————————————————
 // Responsive Media Queries
 //——————————————————————————————————————————————————
 
 @media (max-width: 1440px)
 
+	// Section: Header
 	.header
 		min-height: 750px
 		max-height: 1080px
 
+@media (max-width: 1199px)
+
 @media (max-width: 1024px)
 
+	// Section: Header
 	.header
 		max-height: 900px
 		padding-top: 20%
 
 @media (max-width: 991px)
 
+	// Section: Services
+	%s-padd
+		padding:
+			top: 105px
+			bottom: 105px
+
+	%pseudo-line
+		&::before
+			top: -105px
+			height: 85px
+
+	.s-services
+		&-left
+			display: none
+
+		&-right
+			width: 100%
+			max-width: 550px
+			margin:
+				right: auto
+				left: auto
+
+			ul
+				margin-bottom: 44px
+
+		&-btn
+			left: calc(50% - 20px)
+
+
 @media (max-width: 767px)
 
+	h2
+		margin-bottom: 70px
+		font-size: 36px
+
+	// Section: Header
 	.header
 		h1
 			font-size: 50px
 
+	// Section: Services
+	.s-services
+		&-inner
+			flex-direction: column
+			align-items: center
+
+		&-item
+			&:not(:last-child)
+				margin-bottom: 40px
+
 @media (max-width: 575px)
 
+	h2
+		font-size: 32px
+
+	// Section: Header
 	.header
 		min-height: 568px
 
@@ -36,8 +86,21 @@
 		&-scroll
 			margin-bottom: 10%
 
+	// Section: Services
+	.s-services
+		&-right
+			h4
+				line-height: 1.5
+
+			p
+				line-height: 1.8
+
+			li
+				width: 100%
+
 @media (max-width: 320px)
 
+	// Section: Header
 	.header
 		padding-top: 40px
 

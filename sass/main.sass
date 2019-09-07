@@ -100,27 +100,133 @@
 		color: $hover-color
 		border-color: $hover-color
 
-.details-link
-	font-size: 14px
-	font-weight: 600
-	text-transform: uppercase
-	color: $main-color
-	+transition(color)
+//——————————————————————————————————————————————————
+// Section: Services
+//——————————————————————————————————————————————————
 
-	svg
-		width: 18px
-		height: 13px
-		margin-top: -3px
-		padding-left: 5px
+.s-services
+	background-color: $bg-color
 
-		fill: $accent-color
-		+transition(fill)
+	&-content
+		@extend %s-padd
 
-	&:hover
-		color: $hover-color
+	&-inner
+		display: flex
+		justify-content: space-around
+
+	&-item
+		max-width: 230px
+
+		>svg
+			width: 21px
+			height: 21px
+			margin-bottom: 25px
+
+			fill: $accent-color
+
+		h3
+			font-size: 30px
+
+	p
+		margin-bottom: 20px
+
+		font-size: 14px
+		line-height: 1.95
+		color: $text-color
+
+	&-hidden
+		display: none
+
+		& .container
+			display: flex
+			justify-content: space-between
+			position: relative
+
+	&-left,
+	&-right
+		width: 48%
+
+	&-left
+		padding-top: 145px
+		text-align: right
+
+		background: url(../images/s-services-bg.jpg) right center / cover no-repeat
+
+		h3
+			display: inline-block
+			margin-bottom: 0
+			padding: 15px 36px
+
+			font-size: 30px
+			color: #232323
+
+			background-color: #fff
+
+	&-right
+		@extend %s-padd
+
+		h4
+			position: relative
+			margin-bottom: 30px
+
+			font-size: 17px
+			font-weight: 600
+			text-transform: uppercase
+			line-height: .7
+
+			@extend %pseudo-line
+
+			&::before
+				left: 2px
+
+		p
+			margin-bottom: 30px
+
+		ul
+			margin:
+				top: 40px
+				bottom: 64px
+
+		li
+			display: inline-block
+			width: calc(50% - 4px)
+
+			font-size: 15px
+			font-weight: 600
+
+			svg
+				width: 16px
+				height: 16px
+				margin:
+					top: -2px
+					right: 8px
+
+				fill: $accent-color
+
+			&:not(:last-child)
+				margin-bottom: 27px
+
+	&-btn
+		position: absolute
+		bottom: 25px
+		left: 40px
+
+		padding: 0
+		background: none
 
 		svg
-			fill: $hover-color
+			width: 40px
+			height: 40px
+
+			fill: $text-color
+			+transition(fill)
+
+		&:hover
+			svg
+				fill: lighten($text-color, 25)
+
+
+
 
 
 

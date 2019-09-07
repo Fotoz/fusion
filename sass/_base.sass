@@ -17,12 +17,12 @@ h3
 	font-family: $title-font
 	font-weight: 400
 
-// h2
-// 	max-width: 750px
-// 	margin: 0 auto 110px
+h2
+	max-width: 750px
+	margin: 0 auto 110px
 
-// 	font-size: 40px
-// 	text-align: center
+	font-size: 40px
+	text-align: center
 
 ul
 	margin: 0
@@ -63,6 +63,49 @@ a:hover
 	color: $main-color
 	background-color: $accent-color
 
+// Mixins:
+=transition($property)
+	transition: $property .15s linear
+
+=transition-slower($property)
+	transition: $property .25s linear
+
+// Extentions:
+%main-bg
+	position: relative
+	z-index: 10
+
+	background: url(../images/main-bg.jpg) center / cover no-repeat
+
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -10
+
+		width: 100%
+		height: 100%
+
+		background-color: rgba(#232323, .9)
+
+%s-padd
+	padding:
+		top: 145px
+		bottom: 145px
+
+%pseudo-line
+	&::before
+		content: ''
+		position: absolute
+		top: -145px
+		left: calc(50% - .5px)
+
+		width: 1px
+		height: 125px
+
+		background-color: $accent-color
+
 // Extra classes:
 .container
 	width: 100%
@@ -83,42 +126,63 @@ a:hover
 	max-width: 100%
 	height: auto
 
-// Extentions:
-%main-bg
+.s-suptitle
 	position: relative
-	z-index: 10
+	margin-bottom: 25px
 
-	background: url(../images/main-bg.jpg) center / cover no-repeat
+	font-size: 14px
+	font-weight: 600
+	text-transform: uppercase
+	text-align: center
+	color: $accent-color
 
-	&::before
-		content: ''
-		position: absolute
-		top: 0
-		left: 0
-		z-index: -10
+	@extend %pseudo-line
 
-		width: 100%
-		height: 100%
+.details-link
+	font-size: 14px
+	font-weight: 600
+	text-transform: uppercase
+	color: $main-color
+	+transition(color)
 
-		background-color: rgba($bg-color, .9)
+	svg
+		width: 18px
+		height: 13px
+		margin-top: -3px
+		padding-left: 5px
 
-%s-base
-	position: relative
-	padding:
-		top: 145px
-		bottom: 145px
+		fill: $accent-color
+		+transition(fill)
 
-	&::before
-		content: ''
-		position: absolute
-		top: 0
-		left: calc(50% - .5px)
+	&:hover
+		color: $hover-color
 
-		width: 1px
-		height: 125px
+		svg
+			fill: $hover-color
 
-		background-color: $accent-color
+.contact-btn
+	display: inline-block
+	padding: 18px 32px
 
-// Mixins:
-=transition($property)
-	transition: $property .15s linear
+	font-size: 17px
+	font-weight: 600
+	text-transform: uppercase
+	color: #232323
+
+	background-color: $accent-color
+	+transition-slower(background-color)
+
+	svg
+		width: 25px
+		height: 19px
+		margin-top: -4px
+		margin-left: 2px
+
+		fill: #232323
+
+	&:hover
+		color: #232323
+		background-color: $hover-color
+
+	&:active
+		background-color: darken($accent-color, 25)
