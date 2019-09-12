@@ -104,15 +104,15 @@
 // Section: Services
 //——————————————————————————————————————————————————
 
-.s-services
+.services
 	background-color: $bg-color
 
-	&-content
-		@extend %s-padd
+	&-main
+		@extend %padd
 
-	&-inner
-		display: flex
-		justify-content: space-around
+		.flex-wrapper
+			display: flex
+			justify-content: space-around
 
 	&-item
 		max-width: 230px
@@ -128,107 +128,296 @@
 			font-size: 30px
 
 	p
-		margin-bottom: 20px
-
-		font-size: 14px
-		line-height: 1.95
-		color: $text-color
+		@extend %paragraph
 
 	&-hidden
 		display: none
 
-		& .container
+		.flex-wrapper
 			display: flex
 			justify-content: space-between
 			position: relative
 
-	&-left,
-	&-right
-		width: 48%
+		&-bg,
+		&-content
+			width: 48%
 
-	&-left
-		padding-top: 145px
-		text-align: right
+		&-bg
+			padding-top: 145px
+			text-align: right
 
-		background: url(../images/s-services-bg.jpg) right center / cover no-repeat
+			background: url(../images/services-bg.jpg) right center / cover no-repeat
 
-		h3
-			display: inline-block
-			margin-bottom: 0
-			padding: 15px 36px
+			h3
+				display: inline-block
+				margin-bottom: 0
+				padding: 15px 36px
 
-			font-size: 30px
-			color: #232323
+				font-size: 30px
+				color: #232323
 
-			background-color: #fff
+				background-color: #fff
 
-	&-right
-		@extend %s-padd
+		&-content
+			@extend %padd
 
-		h4
-			position: relative
-			margin-bottom: 30px
+			h4
+				position: relative
+				margin-bottom: 30px
 
-			font-size: 17px
-			font-weight: 600
-			text-transform: uppercase
-			line-height: .7
+				font-size: 17px
+				font-weight: 600
+				text-transform: uppercase
+				line-height: .7
 
-			@extend %pseudo-line
+				@extend %pseudo-line
+
+				&::before
+					left: 2px
+					width: 2px
+
+			p
+				margin-bottom: 30px
+
+			ul
+				margin:
+					top: 40px
+					bottom: 64px
+
+			li
+				display: inline-block
+				width: calc(50% - 4px)
+
+				font-size: 15px
+				font-weight: 600
+
+				svg
+					width: 16px
+					height: 16px
+					margin:
+						top: -2px
+						right: 8px
+
+					fill: $accent-color
+
+				&:not(:last-child)
+					margin-bottom: 27px
+
+		&-btn
+			position: absolute
+			bottom: 25px
+			left: 40px
+
+			padding: 0
+			background: none
+
+			svg
+				width: 40px
+				height: 40px
+
+				fill: $text-color
+				+transition(fill)
+
+			&:hover
+				svg
+					fill: lighten($text-color, 25)
+
+//——————————————————————————————————————————————————
+// Section: Portfolio
+//——————————————————————————————————————————————————
+
+.portfolio
+	background-color: darken($bg-color, 3)
+
+	.owl-carousel.owl-hidden
+		opacity: 1
+
+	.owl-carousel .owl-item img
+		width: auto
+		opacity: .7
+
+	// portfolio-active-carousel
+	&-active-carousel
+		@extend %padd
+
+		.owl-nav.disabled + .owl-dots
+			margin-top: 35px
+
+		.owl-dots
+			.owl-dot
+				span
+					+transition(background)
+
+		.slide
+			@extend .container
+
+			padding:
+				right: 185px
+				left: 185px
+
+		.slide-titles,
+		.slide-links
+			position: absolute
+			z-index: 5
+
+		.slide-titles
+			top: 145px
+			left: 15px
+
+		.suptitle
+			margin-bottom: 15px
+			text-align: left
 
 			&::before
-				left: 2px
+				left: 1px
+				width: 2px
 
-		p
-			margin-bottom: 30px
+		h2
+			margin: 0
+			font-size: 55px
+			text-align: left
 
-		ul
-			margin:
-				top: 40px
-				bottom: 64px
+		.slide-links
+			right: 15px
+			bottom: 145px
 
-		li
-			display: inline-block
-			width: calc(50% - 4px)
+			a
+				display: block
 
-			font-size: 15px
-			font-weight: 600
+				&:first-child
+					margin-bottom: 12px
 
-			svg
-				width: 16px
-				height: 16px
-				margin:
-					top: -2px
-					right: 8px
+				&:last-child
+					position: relative
 
-				fill: $accent-color
+					&::after
+						content: ''
+						position: absolute
+						bottom: -145px
+						left: 1px
 
-			&:not(:last-child)
-				margin-bottom: 27px
+						width: 2px
+						height: 125px
 
-	&-btn
+						background-color: $accent-color
+
+// portfolio-hidden-carousel
+.hidden-carousel-wrapper,
+.portfolio-project-details
+	display: none
+
+.hidden-carousel-wrapper
+	@extend %padd
+
+	max-width: 975px
+
+	.details-link
+		margin-top: 36px
+		display: inline-block
+
+.portfolio-hidden-carousel
+	.owl-nav.disabled + .owl-dots
+		margin-top: 0
+
+	.owl-dots
 		position: absolute
-		bottom: 25px
-		left: 40px
+		right: 0
+		bottom: -60px
 
-		padding: 0
-		background: none
+		.owl-dot
+			span
+				width: 17px
+				margin:
+					right: 12px
+					left: 12px
 
-		svg
-			width: 40px
-			height: 40px
+			&:last-child span
+				margin-right: 0
 
-			fill: $text-color
-			+transition(fill)
+// portfolio-project-details
+@for $i from 1 through 5
+	#project_det_#{$i}
+		.wrapper
+			&::after
+				background-image: url(../images/portfolio/active-carousel/project-#{$i}.jpg)
 
-		&:hover
-			svg
-				fill: lighten($text-color, 25)
+.portfolio-project-details
+	@extend %padd
 
+	text-align: center
 
+	.wrapper
+		position: relative
 
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			left: 50%
 
+			width: 50%
+			height: 100%
 
+			background:
+				position: center
+				size: cover
+				repeat: no-repeat
+
+	.content
+		position: relative
+
+		width: 50%
+		margin-bottom: 35px
+		padding: 40px
+
+		text-align: left
+
+		background-color: $bg-color
+
+		&::before,
+		&::after
+			content: ''
+			position: absolute
+
+			top: 0
+			left: 0
+
+			background-color: $accent-color
+
+		&::before
+			width: 125px
+			height: 2px
+
+		&::after
+			width: 2px
+			height: 125px
+
+	h2, .suptitle
+		text-align: left
+
+	h2
+		margin-bottom: 11px
+
+	.suptitle
+		margin-bottom: 30px
+
+		&::before
+			display: none
+
+		span
+			position: relative
+			top: -1px
+			margin:
+				right: 5px
+				left: 5px
+
+			color: $main-color
+
+	p
+		@extend %paragraph
+
+		&:first-of-type
+			margin-bottom: 30px
 
 
 

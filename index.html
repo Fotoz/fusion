@@ -87,14 +87,14 @@
 					<h1>We’re <span>Fusion</span>, We Build Things for Human</h1>
 
 					<div class="header-services">
-						<a href="#" data-scroll="#s_services">strategy</a>
-						<a href="#" data-scroll="#s_services">branding</a>
-						<a href="#" data-scroll="#s_services">design</a>
+						<a href="#" data-scroll="#services">strategy</a>
+						<a href="#" data-scroll="#services">branding</a>
+						<a href="#" data-scroll="#services">design</a>
 					</div>
 				</div>
 
 				<div class="bottom-line">
-					<a class="header-scroll" href="#" data-scroll="#s_services">
+					<a class="header-scroll" href="#" data-scroll="#services">
 						<svg>
 							<use xlink:href="#down_arrow"></use>
 						</svg>
@@ -115,14 +115,14 @@
 		<!-- End Section: Header -->
 
 		<!-- Section: Services -->
-			<section class="s-services" id="s_services">
-				<div class="s-services-content">
+			<section class="services" id="services">
+				<div class="services-main">
 					<div class="container">
-						<div class="s-suptitle">our services</div>
+						<div class="suptitle">our services</div>
 						<h2>Our team will take your business presence to new level</h2>
 
-						<div class="s-services-inner">
-							<div class="s-services-item">
+						<div class="flex-wrapper">
+							<div class="services-item">
 								<svg>
 									<use xlink:href="#checked_box"></use>
 								</svg>
@@ -130,14 +130,14 @@
 								<h3>Strategy.</h3>
 								<p>Ship it user story iterate engaging co-working intuitive pitch deck hacker prototype SpaceTeam user centered design big data.</p>
 
-								<a class="details-link" id="strategy_link" href="#">see details
+								<a class="details-link" href="#" data-service="#services_strategy">see details
 									<svg>
 										<use xlink:href="#right_arrow"></use>
 									</svg>
 								</a>
 							</div>
 
-							<div class="s-services-item">
+							<div class="services-item">
 								<svg>
 									<use xlink:href="#pen_on"></use>
 								</svg>
@@ -145,14 +145,14 @@
 								<h3>Branding.</h3>
 								<p>Ship it user story iterate engaging co-working intuitive pitch deck hacker prototype SpaceTeam user centered design big data.</p>
 
-								<a class="details-link" id="branding_link" href="#">see details
+								<a class="details-link" href="#" data-service="#services_branding">see details
 									<svg>
 										<use xlink:href="#right_arrow"></use>
 									</svg>
 								</a>
 							</div>
 
-							<div class="s-services-item">
+							<div class="services-item">
 								<svg>
 									<use xlink:href="#pencils"></use>
 								</svg>
@@ -160,120 +160,397 @@
 								<h3>Design.</h3>
 								<p>Ship it user story iterate engaging co-working intuitive pitch deck hacker prototype SpaceTeam user centered design big data.</p>
 
-								<a class="details-link" id="design_link" href="#">see details
+								<a class="details-link" href="#" data-service="#services_design">see details
 									<svg>
 										<use xlink:href="#right_arrow"></use>
 									</svg>
 								</a>
 							</div>
-						</div> <!-- /.s-services-inner -->
+						</div> <!-- /.flex-wrapper -->
 					</div> <!-- /.container -->
-				</div> <!-- /.s-services-content -->
+				</div> <!-- /.services-main -->
 
-				<!-- hidden services -->
-				<div class="s-services-hidden" id="s_services_strategy">
+			<!-- hidden elements -->
+				<div class="services-hidden" id="services_strategy">
 					<div class="container">
-						<div class="s-services-left">
-							<h3>Strategy.</h3>
-						</div>
+						<div class="flex-wrapper">
+							<div class="services-hidden-bg">
+								<h3>Strategy.</h3>
+							</div>
 
-						<div class="s-services-right">
-							<h4>Perfect strategy for your brand</h4>
-							<p>Chances are unless you are very lucky you will go thru many different relationships before you find your special someone. Finding your sole mate is like gambling. In poker and blackjack you may have to play dozens of hands until you get a winning hand, and it is the same with relationships.</p>
-							<p>During your life you will probably meet some people who seem like they may be the one, or that they are closers, and I thought everything was great, until I started to seriously consider getting married.</p>
+							<div class="services-hidden-content">
+								<h4>Perfect strategy for your brand</h4>
+								<p>Chances are unless you are very lucky you will go thru many different relationships before you find your special someone. Finding your sole mate is like gambling. In poker and blackjack you may have to play dozens of hands until you get a winning hand, and it is the same with relationships.</p>
+								<p>During your life you will probably meet some people who seem like they may be the one, or that they are closers, and I thought everything was great, until I started to seriously consider getting married.</p>
 
-							<ul>
-								<li><svg><use xlink:href="#line_chart"></use></svg> Award-winning Strategist</li>
-								<li><svg><use xlink:href="#checklist"></use></svg> Extended Research</li>
-								<li><svg><use xlink:href="#clipboard"></use></svg> Bullet-proof Planning</li>
-								<li><svg><use xlink:href="#thumb_up"></use></svg> Trusted by Thousands</li>
-							</ul>
+								<ul>
+									<li><svg><use xlink:href="#line_chart"></use></svg> Award-winning Strategist</li>
+									<li><svg><use xlink:href="#checklist"></use></svg> Extended Research</li>
+									<li><svg><use xlink:href="#clipboard"></use></svg> Bullet-proof Planning</li>
+									<li><svg><use xlink:href="#thumb_up"></use></svg> Trusted by Thousands</li>
+								</ul>
 
-							<a class="contact-btn" href="#">get in touch
-								<svg>
-									<use xlink:href="#right_arrow"></use>
-								</svg>
-							</a>
+								<a class="contact-btn" href="#">get in touch
+									<svg>
+										<use xlink:href="#right_arrow"></use>
+									</svg>
+								</a>
 
-							<button class="s-services-btn" id="strategy_btn" type="button">
-								<svg>
-									<use xlink:href="#chevron_left"></use>
-								</svg>
-							</button>
-						</div>
+								<button class="services-hidden-btn" type="button" data-service="#services_strategy">
+									<svg>
+										<use xlink:href="#chevron_left"></use>
+									</svg>
+								</button>
+							</div>
+						</div> <!-- /.flex-wrapper -->
 					</div> <!-- /.container -->
-				</div> <!-- /.s-services-hidden -->
+				</div> <!-- /.services-hidden -->
 
-				<div class="s-services-hidden" id="s_services_branding">
+				<div class="services-hidden" id="services_branding">
 					<div class="container">
-						<div class="s-services-left">
-							<h3>Branding.</h3>
-						</div>
+						<div class="flex-wrapper">
+							<div class="services-hidden-bg">
+								<h3>Branding.</h3>
+							</div>
 
-						<div class="s-services-right">
-							<h4>Perfect branding for your brand</h4>
-							<p>Chances are unless you are very lucky you will go thru many different relationships before you find your special someone. Finding your sole mate is like gambling. In poker and blackjack you may have to play dozens of hands until you get a winning hand, and it is the same with relationships.</p>
-							<p>During your life you will probably meet some people who seem like they may be the one, or that they are closers, and I thought everything was great, until I started to seriously consider getting married.</p>
+							<div class="services-hidden-content">
+								<h4>Perfect branding for your brand</h4>
+								<p>Chances are unless you are very lucky you will go thru many different relationships before you find your special someone. Finding your sole mate is like gambling. In poker and blackjack you may have to play dozens of hands until you get a winning hand, and it is the same with relationships.</p>
+								<p>During your life you will probably meet some people who seem like they may be the one, or that they are closers, and I thought everything was great, until I started to seriously consider getting married.</p>
 
-							<ul>
-								<li><svg><use xlink:href="#line_chart"></use></svg> Award-winning Strategist</li>
-								<li><svg><use xlink:href="#checklist"></use></svg> Extended Research</li>
-								<li><svg><use xlink:href="#clipboard"></use></svg> Bullet-proof Planning</li>
-								<li><svg><use xlink:href="#thumb_up"></use></svg> Trusted by Thousands</li>
-							</ul>
+								<ul>
+									<li><svg><use xlink:href="#line_chart"></use></svg> Award-winning Strategist</li>
+									<li><svg><use xlink:href="#checklist"></use></svg> Extended Research</li>
+									<li><svg><use xlink:href="#clipboard"></use></svg> Bullet-proof Planning</li>
+									<li><svg><use xlink:href="#thumb_up"></use></svg> Trusted by Thousands</li>
+								</ul>
 
-							<a class="contact-btn" href="#">get in touch
-								<svg>
-									<use xlink:href="#right_arrow"></use>
-								</svg>
-							</a>
+								<a class="contact-btn" href="#">get in touch
+									<svg>
+										<use xlink:href="#right_arrow"></use>
+									</svg>
+								</a>
 
-							<button class="s-services-btn" id="branding_btn" type="button">
-								<svg>
-									<use xlink:href="#chevron_left"></use>
-								</svg>
-							</button>
-						</div>
+								<button class="services-hidden-btn" type="button" data-service="#services_branding">
+									<svg>
+										<use xlink:href="#chevron_left"></use>
+									</svg>
+								</button>
+							</div>
+						</div> <!-- /.flex-wrapper -->
 					</div> <!-- /.container -->
-				</div> <!-- /.s-services-hidden -->
+				</div> <!-- /.services-hidden -->
 
-				<div class="s-services-hidden" id="s_services_design">
+				<div class="services-hidden" id="services_design">
 					<div class="container">
-						<div class="s-services-left">
-							<h3>Design.</h3>
-						</div>
+						<div class="flex-wrapper">
+							<div class="services-hidden-bg">
+								<h3>Design.</h3>
+							</div>
 
-						<div class="s-services-right">
-							<h4>Perfect designing for your brand</h4>
-							<p>Chances are unless you are very lucky you will go thru many different relationships before you find your special someone. Finding your sole mate is like gambling. In poker and blackjack you may have to play dozens of hands until you get a winning hand, and it is the same with relationships.</p>
-							<p>During your life you will probably meet some people who seem like they may be the one, or that they are closers, and I thought everything was great, until I started to seriously consider getting married.</p>
+							<div class="services-hidden-content">
+								<h4>Perfect design for your brand</h4>
+								<p>Chances are unless you are very lucky you will go thru many different relationships before you find your special someone. Finding your sole mate is like gambling. In poker and blackjack you may have to play dozens of hands until you get a winning hand, and it is the same with relationships.</p>
+								<p>During your life you will probably meet some people who seem like they may be the one, or that they are closers, and I thought everything was great, until I started to seriously consider getting married.</p>
 
-							<ul>
-								<li><svg><use xlink:href="#line_chart"></use></svg> Award-winning Strategist</li>
-								<li><svg><use xlink:href="#checklist"></use></svg> Extended Research</li>
-								<li><svg><use xlink:href="#clipboard"></use></svg> Bullet-proof Planning</li>
-								<li><svg><use xlink:href="#thumb_up"></use></svg> Trusted by Thousands</li>
-							</ul>
+								<ul>
+									<li><svg><use xlink:href="#line_chart"></use></svg> Award-winning Strategist</li>
+									<li><svg><use xlink:href="#checklist"></use></svg> Extended Research</li>
+									<li><svg><use xlink:href="#clipboard"></use></svg> Bullet-proof Planning</li>
+									<li><svg><use xlink:href="#thumb_up"></use></svg> Trusted by Thousands</li>
+								</ul>
 
-							<a class="contact-btn" href="#">get in touch
-								<svg>
-									<use xlink:href="#right_arrow"></use>
-								</svg>
-							</a>
+								<a class="contact-btn" href="#">get in touch
+									<svg>
+										<use xlink:href="#right_arrow"></use>
+									</svg>
+								</a>
 
-							<button class="s-services-btn" id="design_btn" type="button">
-								<svg>
-									<use xlink:href="#chevron_left"></use>
-								</svg>
-							</button>
-						</div>
+								<button class="services-hidden-btn" type="button" data-service="#services_design">
+									<svg>
+										<use xlink:href="#chevron_left"></use>
+									</svg>
+								</button>
+							</div>
+						</div> <!-- /.flex-wrapper -->
 					</div> <!-- /.container -->
-				</div> <!-- /.s-services-hidden -->
+				</div> <!-- /.services-hidden -->
+			<!-- end: hidden elements -->
 			</section>
 		<!-- End Section: Services -->
 
+		<!-- Section: Portfolio -->
+			<section class="portfolio">
+				<div class="owl-carousel  owl-theme  portfolio-active-carousel">
+					<div class="slide">
+						<div class="slide-titles">
+							<div class="suptitle">branding & design</div>
+							<h2>Project One</h2>
+						</div>
+
+						<div class="slide-links">
+							<a class="details-link" href="#" data-project="#project_det_1">project details
+								<svg>
+									<use xlink:href="#right_arrow"></use>
+								</svg>
+							</a>
+
+							<a class="details-link  carousel-display--js" href="#">view slides
+								<svg>
+									<use xlink:href="#right_arrow"></use>
+								</svg>
+							</a>
+						</div>
+
+						<img class="img-fluid" src="images/portfolio/active-carousel/project-1.jpg" alt="Project One">
+					</div>
+
+					<div class="slide">
+						<div class="slide-titles">
+							<div class="suptitle">branding & design</div>
+							<h2>Project Two</h2>
+						</div>
+
+						<div class="slide-links">
+							<a class="details-link" href="#" data-project="#project_det_2">project details
+								<svg>
+									<use xlink:href="#right_arrow"></use>
+								</svg>
+							</a>
+
+							<a class="details-link  carousel-display--js" href="#">view slides
+								<svg>
+									<use xlink:href="#right_arrow"></use>
+								</svg>
+							</a>
+						</div>
+
+						<img class="img-fluid" src="images/portfolio/active-carousel/project-2.jpg" alt="Project Two">
+					</div>
+
+					<div class="slide">
+						<div class="slide-titles">
+							<div class="suptitle">branding & design</div>
+							<h2>Project Three</h2>
+						</div>
+
+						<div class="slide-links">
+							<a class="details-link" href="#" data-project="#project_det_3">project details
+								<svg>
+									<use xlink:href="#right_arrow"></use>
+								</svg>
+							</a>
+
+							<a class="details-link  carousel-display--js" href="#">view slides
+								<svg>
+									<use xlink:href="#right_arrow"></use>
+								</svg>
+							</a>
+						</div>
+
+						<img class="img-fluid" src="images/portfolio/active-carousel/project-3.jpg" alt="Project Three">
+					</div>
+
+					<div class="slide">
+						<div class="slide-titles">
+							<div class="suptitle">branding & design</div>
+							<h2>Project Four</h2>
+						</div>
+
+						<div class="slide-links">
+							<a class="details-link" href="#" data-project="#project_det_4">project details
+								<svg>
+									<use xlink:href="#right_arrow"></use>
+								</svg>
+							</a>
+
+							<a class="details-link  carousel-display--js" href="#">view slides
+								<svg>
+									<use xlink:href="#right_arrow"></use>
+								</svg>
+							</a>
+						</div>
+
+						<img class="img-fluid" src="images/portfolio/active-carousel/project-4.jpg" alt="Project Four">
+					</div>
+
+					<div class="slide">
+						<div class="slide-titles">
+							<div class="suptitle">branding & design</div>
+							<h2>Project Five</h2>
+						</div>
+
+						<div class="slide-links">
+							<a class="details-link" href="#" data-project="#project_det_5">project details
+								<svg>
+									<use xlink:href="#right_arrow"></use>
+								</svg>
+							</a>
+
+							<a class="details-link  carousel-display--js" href="#">view slides
+								<svg>
+									<use xlink:href="#right_arrow"></use>
+								</svg>
+							</a>
+						</div>
+
+						<img class="img-fluid" src="images/portfolio/active-carousel/project-5.jpg" alt="Project Five">
+					</div>
+				</div> <!-- /.portfolio-active-carousel -->
+			<!-- hidden elements -->
+				<div class="container  hidden-carousel-wrapper">
+					<div class="owl-carousel  owl-theme  portfolio-hidden-carousel">
+						<img class="img-fluid" src="images/portfolio/hidden-carousel/project-1.jpg" alt="Project One">
+						<img class="img-fluid" src="images/portfolio/hidden-carousel/project-2.jpg" alt="Project Two">
+						<img class="img-fluid" src="images/portfolio/hidden-carousel/project-3.jpg" alt="Project Three">
+						<img class="img-fluid" src="images/portfolio/hidden-carousel/project-4.jpg" alt="Project Four">
+						<img class="img-fluid" src="images/portfolio/hidden-carousel/project-5.jpg" alt="Project Five">
+					</div>
+
+					<a class="details-link  details-link-rotate  carousel-display--js" href="#">
+						<svg>
+							<use xlink:href="#right_arrow"></use>
+						</svg>
+						back to portfolio
+					</a>
+				</div>
+
+				<div class="portfolio-project-details" id="project_det_1">
+					<div class="container">
+						<div class="wrapper">
+							<div class="content">
+								<h2>Project One</h2>
+								<div class="suptitle">branding & design <span>|</span> march 2019</div>
+								<p>Having a baby can be a nerve wracking experience for new parents – not the nine months of pregnancy, I’m talking about after the infant is brought home from the hospital. It’s always the same thing, by the time they have their third child they have it all figured out, but with number one it’s a learning thing.</p>
+								<p>Baby monitors help you hear your baby’s needs without you having to be in the room with the baby. Some baby monitors are portable, or “mobile” and are small enough that you can carry it in your pocket as you do your daily chores around the house. Depending on your price range it’s best to have a base unit that plugs into the wall. The receiving unit can be like your portable phone, you can carry it around with you, and plug it back into the base unit to be recharged.</p>
+
+								<a class="details-link" href="#">see the project
+									<svg>
+										<use xlink:href="#right_arrow"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+
+						<a class="details-link  details-link-rotate" href="#" data-project="#project_det_1">
+							<svg>
+								<use xlink:href="#right_arrow"></use>
+							</svg>
+							back to portfolio
+						</a>
+					</div> <!-- /.container -->
+				</div> <!-- /.portfolio-project-details -->
+
+				<div class="portfolio-project-details" id="project_det_2">
+					<div class="container">
+						<div class="wrapper">
+							<div class="content">
+								<h2>Project Two</h2>
+								<div class="suptitle">branding & design <span>|</span> april 2019</div>
+								<p>Having a baby can be a nerve wracking experience for new parents – not the nine months of pregnancy, I’m talking about after the infant is brought home from the hospital. It’s always the same thing, by the time they have their third child they have it all figured out, but with number one it’s a learning thing.</p>
+								<p>Baby monitors help you hear your baby’s needs without you having to be in the room with the baby. Some baby monitors are portable, or “mobile” and are small enough that you can carry it in your pocket as you do your daily chores around the house. Depending on your price range it’s best to have a base unit that plugs into the wall. The receiving unit can be like your portable phone, you can carry it around with you, and plug it back into the base unit to be recharged.</p>
+
+								<a class="details-link" href="#">see the project
+									<svg>
+										<use xlink:href="#right_arrow"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+
+						<a class="details-link  details-link-rotate" href="#" data-project="#project_det_2">
+							<svg>
+								<use xlink:href="#right_arrow"></use>
+							</svg>
+							back to portfolio
+						</a>
+					</div> <!-- /.container -->
+				</div> <!-- /.portfolio-project-details -->
+
+				<div class="portfolio-project-details" id="project_det_3">
+					<div class="container">
+						<div class="wrapper">
+							<div class="content">
+								<h2>Project Three</h2>
+								<div class="suptitle">branding & design <span>|</span> august 2019</div>
+								<p>Having a baby can be a nerve wracking experience for new parents – not the nine months of pregnancy, I’m talking about after the infant is brought home from the hospital. It’s always the same thing, by the time they have their third child they have it all figured out, but with number one it’s a learning thing.</p>
+								<p>Baby monitors help you hear your baby’s needs without you having to be in the room with the baby. Some baby monitors are portable, or “mobile” and are small enough that you can carry it in your pocket as you do your daily chores around the house. Depending on your price range it’s best to have a base unit that plugs into the wall. The receiving unit can be like your portable phone, you can carry it around with you, and plug it back into the base unit to be recharged.</p>
+
+								<a class="details-link" href="#">see the project
+									<svg>
+										<use xlink:href="#right_arrow"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+
+						<a class="details-link  details-link-rotate" href="#" data-project="#project_det_3">
+							<svg>
+								<use xlink:href="#right_arrow"></use>
+							</svg>
+							back to portfolio
+						</a>
+					</div> <!-- /.container -->
+				</div> <!-- /.portfolio-project-details -->
+
+				<div class="portfolio-project-details" id="project_det_4">
+					<div class="container">
+						<div class="wrapper">
+							<div class="content">
+								<h2>Project Four</h2>
+								<div class="suptitle">branding & design <span>|</span> september 2019</div>
+								<p>Having a baby can be a nerve wracking experience for new parents – not the nine months of pregnancy, I’m talking about after the infant is brought home from the hospital. It’s always the same thing, by the time they have their third child they have it all figured out, but with number one it’s a learning thing.</p>
+								<p>Baby monitors help you hear your baby’s needs without you having to be in the room with the baby. Some baby monitors are portable, or “mobile” and are small enough that you can carry it in your pocket as you do your daily chores around the house. Depending on your price range it’s best to have a base unit that plugs into the wall. The receiving unit can be like your portable phone, you can carry it around with you, and plug it back into the base unit to be recharged.</p>
+
+								<a class="details-link" href="#">see the project
+									<svg>
+										<use xlink:href="#right_arrow"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+
+						<a class="details-link  details-link-rotate" href="#" data-project="#project_det_4">
+							<svg>
+								<use xlink:href="#right_arrow"></use>
+							</svg>
+							back to portfolio
+						</a>
+					</div> <!-- /.container -->
+				</div> <!-- /.portfolio-project-details -->
+
+				<div class="portfolio-project-details" id="project_det_5">
+					<div class="container">
+						<div class="wrapper">
+							<div class="content">
+								<h2>Project Five</h2>
+								<div class="suptitle">branding & design <span>|</span> october 2019</div>
+								<p>Having a baby can be a nerve wracking experience for new parents – not the nine months of pregnancy, I’m talking about after the infant is brought home from the hospital. It’s always the same thing, by the time they have their third child they have it all figured out, but with number one it’s a learning thing.</p>
+								<p>Baby monitors help you hear your baby’s needs without you having to be in the room with the baby. Some baby monitors are portable, or “mobile” and are small enough that you can carry it in your pocket as you do your daily chores around the house. Depending on your price range it’s best to have a base unit that plugs into the wall. The receiving unit can be like your portable phone, you can carry it around with you, and plug it back into the base unit to be recharged.</p>
+
+								<a class="details-link" href="#">see the project
+									<svg>
+										<use xlink:href="#right_arrow"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+
+						<a class="details-link  details-link-rotate" href="#" data-project="#project_det_5">
+							<svg>
+								<use xlink:href="#right_arrow"></use>
+							</svg>
+							back to portfolio
+						</a>
+					</div> <!-- /.container -->
+				</div> <!-- /.portfolio-project-details -->
+			<!-- end: hidden elements -->
+			</section>
+		<!-- End Section: Portfolio -->
+
 		<!-- Local JS -->
 			<script src="libs/jquery/jquery-3.4.1.min.js"></script>
+			<script src="libs/owl-carousel/js/owl.carousel.min.js"></script>
 			<script src="js/common.js"></script>
 	</body>
 

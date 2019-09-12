@@ -21,7 +21,7 @@
 @media (max-width: 991px)
 
 	// Section: Services
-	%s-padd
+	%padd
 		padding:
 			top: 105px
 			bottom: 105px
@@ -31,11 +31,11 @@
 			top: -105px
 			height: 85px
 
-	.s-services
-		&-left
+	.services-hidden
+		&-bg
 			display: none
 
-		&-right
+		&-content
 			width: 100%
 			max-width: 550px
 			margin:
@@ -48,6 +48,53 @@
 		&-btn
 			left: calc(50% - 20px)
 
+	// Section: Portfolio
+	.portfolio
+		&-active-carousel
+			.slide
+				max-width: 800px
+				padding:
+					right: 15px
+					left: 15px
+
+			.slide-titles
+				position: static
+
+			.suptitle
+				margin-bottom: 5px
+
+				&::before
+					display: none
+
+			.slide-links
+				top: 34px
+				bottom: auto
+
+				a
+					&:last-child
+						&::after
+							display: none
+
+		&-project-details
+			.wrapper
+				&::after
+					display: none
+
+			.content
+				width: 100%
+				max-width: 570px
+				margin:
+					right: auto
+					left: auto
+
+				&::before
+					width: 85px
+
+				&::after
+					height: 85px
+
+	.hidden-carousel-wrapper
+		max-width: 800px
 
 @media (max-width: 767px)
 
@@ -61,14 +108,24 @@
 			font-size: 50px
 
 	// Section: Services
-	.s-services
-		&-inner
-			flex-direction: column
-			align-items: center
+	.services
+		&-main
+			.flex-wrapper
+				flex-direction: column
+				align-items: center
 
 		&-item
 			&:not(:last-child)
 				margin-bottom: 40px
+
+	// Section: Portfolio
+	.portfolio
+		&-active-carousel
+			h2
+				font-size: 46px
+
+			.slide-links
+				top: 25px
 
 @media (max-width: 575px)
 
@@ -87,8 +144,8 @@
 			margin-bottom: 10%
 
 	// Section: Services
-	.s-services
-		&-right
+	.services-hidden
+		&-content
 			h4
 				line-height: 1.5
 
@@ -97,6 +154,63 @@
 
 			li
 				width: 100%
+
+				&:not(:last-child)
+					margin-bottom: 17px
+
+	// Section: Portfolio
+	.portfolio
+		&-active-carousel
+			.slide-titles
+				margin-bottom: 5px
+
+			.suptitle
+				margin-bottom: 0
+
+			h2
+				font-size: 42px
+
+			.slide-links
+				position: static
+				margin-bottom: 10px
+
+			.owl-dots
+				.owl-dot
+					span
+						margin:
+							right: 14px
+							left: 14px
+
+		&-hidden-carousel
+			.owl-nav.disabled + .owl-dots
+				margin-top: 30px
+
+			.owl-dots
+				position: static
+
+				.owl-dot
+					span
+						width: 30px
+						margin:
+							right: 14px
+							left: 14px
+
+					&:last-child span
+						margin-right: 14px
+
+		&-project-details
+			.content
+				padding: 25px 11px
+				margin-bottom: 30px
+
+			p
+				line-height: 1.8
+
+	.hidden-carousel-wrapper
+		text-align: center
+
+		.details-link
+			margin-top: 30px
 
 @media (max-width: 320px)
 
@@ -111,3 +225,9 @@
 
 		&-scroll
 			margin-bottom: 5%
+
+	// Section: Portfolio
+	.portfolio
+		&-active-carousel
+			h2
+				font-size: 38px

@@ -89,7 +89,7 @@ a:hover
 
 		background-color: rgba(#232323, .9)
 
-%s-padd
+%padd
 	padding:
 		top: 145px
 		bottom: 145px
@@ -106,8 +106,16 @@ a:hover
 
 		background-color: $accent-color
 
+%paragraph
+	margin-bottom: 20px
+
+	font-size: 14px
+	line-height: 1.95
+	color: $text-color
+
 // Extra classes:
 .container
+	position: relative
 	width: 100%
 	max-width: 1170px
 	margin:
@@ -126,7 +134,7 @@ a:hover
 	max-width: 100%
 	height: auto
 
-.s-suptitle
+.suptitle
 	position: relative
 	margin-bottom: 25px
 
@@ -159,6 +167,10 @@ a:hover
 
 		svg
 			fill: $hover-color
+
+	&-rotate
+		svg
+			transform: rotate(180deg)
 
 .contact-btn
 	display: inline-block

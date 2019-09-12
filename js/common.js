@@ -19,26 +19,39 @@ $(function() {
 	});
 
 
+	// Owl-carousels
+	$('.portfolio-active-carousel, .portfolio-hidden-carousel').owlCarousel({
+		items: 1,
+		smartSpeed: 700,
+		loop: true
+	});
+
+
 	// Section: Services
-	$('#strategy_link, #strategy_btn').on('click', function(event) {
+	$('[data-service]').on('click', function(event) {
 		event.preventDefault();
 
-		$('.s-services-content').slideToggle(500)
-		$('#s_services_strategy').slideToggle(500)
+		var serviceId = $(this).data('service');
+
+		$('.services-main',).slideToggle(500);
+		$(serviceId).slideToggle(500);
 	});
 
-	$('#branding_link, #branding_btn').on('click', function(event) {
+
+	// Section: Portfolio
+	$('[data-project]').on('click', function(event) {
 		event.preventDefault();
 
-		$('.s-services-content').slideToggle(500)
-		$('#s_services_branding').slideToggle(500)
+		var projectId = $(this).data('project');
+
+		$('.owl-carousel.portfolio-active-carousel').slideToggle(500);
+		$(projectId).slideToggle(500);
 	});
 
-	$('#design_link, #design_btn').on('click', function(event) {
+	$('.carousel-display--js').on('click', function(event) {
 		event.preventDefault();
 
-		$('.s-services-content').slideToggle(500)
-		$('#s_services_design').slideToggle(500)
+		$('.owl-carousel.portfolio-active-carousel, .hidden-carousel-wrapper').slideToggle(500);
 	});
 
 });
