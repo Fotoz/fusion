@@ -670,6 +670,11 @@ a:hover {
   background-color: #feb960;
 }
 
+.owl-carousel .owl-item img {
+  display: inline;
+  width: auto;
+}
+
 .header {
   position: relative;
   z-index: 10;
@@ -686,7 +691,7 @@ a:hover {
   background-color: rgba(35, 35, 35, 0.9);
 }
 
-.portfolio-project-details, .hidden-carousel-wrapper, .portfolio-active-carousel, .services-hidden-content, .services-main {
+.testimonials, .portfolio-project-details, .hidden-carousel-wrapper, .portfolio-active-carousel, .services-hidden-content, .services-main {
   padding-top: 145px;
   padding-bottom: 145px;
 }
@@ -973,7 +978,6 @@ a:hover {
   opacity: 1;
 }
 .portfolio .owl-carousel .owl-item img {
-  width: auto;
   opacity: 0.7;
 }
 .portfolio-active-carousel .owl-nav.disabled + .owl-dots {
@@ -981,6 +985,14 @@ a:hover {
 }
 .portfolio-active-carousel .owl-dots .owl-dot span {
   transition: background 0.15s linear;
+}
+.portfolio-active-carousel .owl-item.active .slide-titles {
+  top: 145px;
+  opacity: 1;
+}
+.portfolio-active-carousel .owl-item.active .slide-links {
+  bottom: 145px;
+  opacity: 1;
 }
 .portfolio-active-carousel .slide {
   padding-right: 185px;
@@ -990,9 +1002,11 @@ a:hover {
 .portfolio-active-carousel .slide-links {
   position: absolute;
   z-index: 5;
+  opacity: 0;
+  transition: all 0.7s linear;
 }
 .portfolio-active-carousel .slide-titles {
-  top: 145px;
+  top: -145px;
   left: 15px;
 }
 .portfolio-active-carousel .suptitle {
@@ -1010,7 +1024,7 @@ a:hover {
 }
 .portfolio-active-carousel .slide-links {
   right: 15px;
-  bottom: 145px;
+  bottom: -145px;
 }
 .portfolio-active-carousel .slide-links a {
   display: block;
@@ -1040,8 +1054,8 @@ a:hover {
   max-width: 975px;
 }
 .hidden-carousel-wrapper .details-link {
-  margin-top: 36px;
   display: inline-block;
+  margin-top: 37px;
 }
 
 .portfolio-hidden-carousel .owl-nav.disabled + .owl-dots {
@@ -1050,7 +1064,7 @@ a:hover {
 .portfolio-hidden-carousel .owl-dots {
   position: absolute;
   right: 0;
-  bottom: -60px;
+  bottom: -61px;
 }
 .portfolio-hidden-carousel .owl-dots .owl-dot span {
   width: 17px;
@@ -1097,6 +1111,7 @@ a:hover {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  opacity: 0.7;
 }
 .portfolio-project-details .content {
   position: relative;
@@ -1121,7 +1136,8 @@ a:hover {
   width: 2px;
   height: 125px;
 }
-.portfolio-project-details h2, .portfolio-project-details .suptitle {
+.portfolio-project-details h2,
+.portfolio-project-details .suptitle {
   text-align: left;
 }
 .portfolio-project-details h2 {
@@ -1144,6 +1160,58 @@ a:hover {
   margin-bottom: 30px;
 }
 
+.testimonials {
+  background-color: #202020;
+}
+.testimonials .company-logos {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.testimonials-carousel .slide {
+  max-width: 750px;
+  margin: 95px auto 25px;
+  padding: 0 60px 35px;
+  text-align: center;
+  background-color: #181818;
+  box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.4);
+}
+.testimonials-carousel img {
+  height: 75px;
+  margin-bottom: 44px;
+}
+.testimonials-carousel p {
+  margin-bottom: 40px;
+  font-size: 17px;
+  font-family: "Merriweather", serif;
+  line-height: 2;
+  color: #bbb;
+}
+.testimonials-carousel .client-name {
+  margin-bottom: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #feb960;
+}
+.testimonials-carousel .client-name::before, .testimonials-carousel .client-name::after {
+  content: "";
+  display: inline-block;
+  vertical-align: 9px;
+  width: 170px;
+  height: 1px;
+  background-color: #474747;
+}
+.testimonials-carousel .client-name::before {
+  margin-right: 40px;
+}
+.testimonials-carousel .client-name::after {
+  margin-left: 40px;
+}
+.testimonials-carousel .client-post {
+  font-size: 13px;
+}
+
 @media (max-width: 1440px) {
   .header {
     min-height: 750px;
@@ -1157,7 +1225,7 @@ a:hover {
   }
 }
 @media (max-width: 991px) {
-  .services-main, .services-hidden-content, .portfolio-active-carousel, .hidden-carousel-wrapper, .portfolio-project-details {
+  .services-main, .services-hidden-content, .portfolio-active-carousel, .hidden-carousel-wrapper, .portfolio-project-details, .testimonials {
     padding-top: 105px;
     padding-bottom: 105px;
   }
@@ -1190,6 +1258,7 @@ a:hover {
   }
   .portfolio-active-carousel .slide-titles {
     position: static;
+    opacity: 1;
   }
   .portfolio-active-carousel .suptitle {
     margin-bottom: 5px;
@@ -1199,7 +1268,7 @@ a:hover {
   }
   .portfolio-active-carousel .slide-links {
     top: 34px;
-    bottom: auto;
+    opacity: 1;
   }
   .portfolio-active-carousel .slide-links a:last-child::after {
     display: none;
@@ -1248,10 +1317,34 @@ a:hover {
   .portfolio-active-carousel .slide-links {
     top: 25px;
   }
+
+  .testimonials .company-logos {
+    justify-content: space-around;
+    max-width: 285px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .testimonials .company-logos img:not(:last-child) {
+    margin: 0 15px 30px;
+  }
+  .testimonials-carousel .slide {
+    margin: 75px 20px 25px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+  .testimonials-carousel .client-name::before, .testimonials-carousel .client-name::after {
+    width: 120px;
+  }
+  .testimonials-carousel .client-name::before {
+    margin-right: 30px;
+  }
+  .testimonials-carousel .client-name::after {
+    margin-left: 30px;
+  }
 }
 @media (max-width: 575px) {
   h2 {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   .header {
@@ -1278,6 +1371,9 @@ a:hover {
     margin-bottom: 17px;
   }
 
+  .portfolio-active-carousel .owl-nav.disabled + .owl-dots {
+    margin-top: 30px;
+  }
   .portfolio-active-carousel .slide-titles {
     margin-bottom: 5px;
   }
@@ -1289,7 +1385,14 @@ a:hover {
   }
   .portfolio-active-carousel .slide-links {
     position: static;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+  }
+  .portfolio-active-carousel .slide-links a {
+    display: inline-block;
+  }
+  .portfolio-active-carousel .slide-links a:first-child {
+    margin-right: 15px;
+    margin-bottom: 0;
   }
   .portfolio-active-carousel .owl-dots .owl-dot span {
     margin-right: 14px;
@@ -1321,7 +1424,29 @@ a:hover {
     text-align: center;
   }
   .hidden-carousel-wrapper .details-link {
-    margin-top: 30px;
+    margin-top: 23px;
+  }
+
+  .testimonials-carousel .owl-dots .owl-dot span {
+    margin-right: 14px;
+    margin-left: 14px;
+  }
+  .testimonials-carousel .slide {
+    margin: 75px 20px 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .testimonials-carousel p {
+    font-size: 16px;
+  }
+  .testimonials-carousel .client-name::before, .testimonials-carousel .client-name::after {
+    width: 42px;
+  }
+  .testimonials-carousel .client-name::before {
+    margin-right: 10px;
+  }
+  .testimonials-carousel .client-name::after {
+    margin-left: 10px;
   }
 }
 @media (max-width: 320px) {
@@ -1337,7 +1462,7 @@ a:hover {
   }
 
   .portfolio-active-carousel h2 {
-    font-size: 38px;
+    font-size: 39px;
   }
 }
 

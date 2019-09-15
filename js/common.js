@@ -19,8 +19,8 @@ $(function() {
 	});
 
 
-	// Owl-carousels
-	$('.portfolio-active-carousel, .portfolio-hidden-carousel').owlCarousel({
+	// Owl-carousel
+	$('.owl-carousel').owlCarousel({
 		items: 1,
 		smartSpeed: 700,
 		loop: true

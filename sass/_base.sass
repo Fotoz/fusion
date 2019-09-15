@@ -63,6 +63,13 @@ a:hover
 	color: $main-color
 	background-color: $accent-color
 
+// Owl-carousel img restyle
+.owl-carousel
+	.owl-item
+		img
+			display: inline
+			width: auto
+
 // Mixins:
 =transition($property)
 	transition: $property .15s linear
@@ -138,8 +145,9 @@ a:hover
 	position: relative
 	margin-bottom: 25px
 
-	font-size: 14px
-	font-weight: 600
+	font:
+		size: 14px
+		weight: 600
 	text-transform: uppercase
 	text-align: center
 	color: $accent-color
