@@ -54,4 +54,12 @@ $(function() {
 		$('.owl-carousel.portfolio-active-carousel, .hidden-carousel-wrapper').slideToggle(500);
 	});
 
+
+	// Section: Our Team
+	$('.profile-wrapper').on('click', function(event) {
+		$(this).addClass('active');
+		$('.profile-wrapper.active .single-profile, .profile-wrapper.active .active-profile').fadeToggle();
+		$(this).removeClass('active');
+	});
+
 });

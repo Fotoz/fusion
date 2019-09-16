@@ -11,6 +11,25 @@
 
 @media (max-width: 1199px)
 
+	// Section: Our Team
+	.our-team
+		&-profiles
+			width: 100%
+			max-width: 570px
+			margin:
+				right: auto
+				left: auto
+
+			.profile-wrapper
+				flex: 0 0 50%
+				max-width: 50%
+
+				&:nth-child(even)
+					border-right-color: transparent
+
+				&:nth-child(n + 5):nth-child(-n + 6)
+					border-bottom-color: $bg-color
+
 @media (max-width: 1024px)
 
 	// Section: Header
@@ -285,6 +304,20 @@
 				&::after
 					margin-left: 10px
 
+	// Section: Our Team
+	.our-team
+		&-profiles
+			max-width: 285px
+
+			.profile-wrapper
+				flex: 0 0 100%
+				max-width: 100%
+
+				&:nth-child(odd)
+					border-right-color: transparent
+
+				&:nth-child(n + 7)
+					border-bottom-color: $bg-color
 
 @media (max-width: 320px)
 
