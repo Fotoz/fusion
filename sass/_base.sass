@@ -11,6 +11,8 @@ body
 	font: 400 16px / 1.5 $default-font
 	color: $main-color
 
+	background-color: $bg-color
+
 h1,
 h2,
 h3
@@ -206,3 +208,18 @@ a:hover
 
 	&:active
 		background-color: darken($accent-color, 25)
+
+// Scrollbar customization for WebKit browsers:
+::-webkit-scrollbar
+	width: 15px
+
+::-webkit-scrollbar-track
+	background-color: $border-color
+
+::-webkit-scrollbar-thumb
+	background-color: $accent-color
+	border-radius: 8px
+	border: 3px solid $border-color
+
+	&:hover
+		background-color: $hover-color

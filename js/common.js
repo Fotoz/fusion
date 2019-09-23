@@ -19,8 +19,13 @@ $(function() {
 	});
 
 
-	// Owl-carousel
-	$('.owl-carousel').owlCarousel({
+	// Owl-carousels
+	$('.portfolio-active-carousel').owlCarousel({
+		items: 1,
+		smartSpeed: 700
+	});
+
+	$('.portfolio-hidden-carousel, .testimonials-carousel').owlCarousel({
 		items: 1,
 		smartSpeed: 700,
 		loop: true
@@ -33,7 +38,7 @@ $(function() {
 
 		var serviceId = $(this).data('service');
 
-		$('.services-main',).slideToggle(500);
+		$('.services-main').slideToggle(500);
 		$(serviceId).slideToggle(500);
 	});
 
@@ -60,6 +65,17 @@ $(function() {
 		$(this).addClass('active');
 		$('.profile-wrapper.active .single-profile, .profile-wrapper.active .active-profile').fadeToggle();
 		$(this).removeClass('active');
+	});
+
+
+	// Section: Footer
+	$('input').focus(function() {
+		$(this).prev('label').addClass('label-active');
+	})
+	.blur(function() {
+		if ( $(this).val() === '' ) {
+			$(this).prev('label').removeClass('label-active');
+		}
 	});
 
 });

@@ -84,10 +84,13 @@
 		align-items: center
 
 .site-logo
+	display: inline-block
+
 	width: 45px
 	height: 45px
 
 	font-size: 25px
+	text-align: center
 	text-transform: uppercase
 	line-height: 42px
 	color: $accent-color
@@ -608,23 +611,136 @@
 
 			overflow-y: auto
 
+//——————————————————————————————————————————————————
+// Section: Footer
+//——————————————————————————————————————————————————
 
+.footer
+	@extend %padd, %main-bg
 
+	padding-bottom: 115px
 
+	h2
+		margin-bottom: 75px
 
+	&-container
+		@extend .container
 
+		max-width: 780px
 
+	&-form
+		margin-bottom: 120px
+		padding: 55px
 
+		font-size: 14px
 
+		background-color: darken($bg-color, 3)
+		box-shadow: 3px 5px 15px rgba(#000, .4)
 
+		label
+			margin-bottom: 0
 
+			text-transform: uppercase
+			cursor: pointer
+			+transition(all)
 
+		input
+			display: block
 
+			width: 100%
+			margin-bottom: 40px
+			padding:
+				top: 3px
+				bottom: 10px
 
+			color: $main-color
 
+			background: none
+			border: none
+			border-bottom: 1px solid #5c5c5c
+			+transition(border-bottom-color)
 
+			&:focus
+				border-bottom-color: $accent-color
 
-// попытатся  реализовать скоролл на странице и в блоках профилей команды,
-// узнать как скроллится ли body при скроле профиля команды
+		&-inner
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
 
+			margin-bottom: 26px
+
+		.input-wrapper
+			flex: 0 0 43%
+			width: 43%
+
+		.contact-btn
+			display: table
+			margin: 55px auto 0
+			padding:
+				right: 35px
+				left: 35px
+
+	&-contacts
+		display: flex
+		justify-content: space-between
+
+		&-item
+			flex: 0 0 25%
+			width: 25%
+
+			&:first-child
+				flex: 0 0 7%
+				width: 7%
+
+			.site-logo
+				margin-top: 6px
+
+			h4
+				margin-bottom: 16px
+
+				font:
+					size: 14px
+					weight: 600
+				text-transform: uppercase
+
+			address
+				margin-bottom: 0
+
+				font-size: 14px
+				line-height: 2
+				color: $text-color
+
+				>a
+					color: $text-color
+					+transition(color)
+
+					&:hover
+						color: $accent-color
+
+			.social-links
+				margin-top: 19px
+
+				a
+					display: inline-block
+
+					&:not(:last-child)
+						margin-right: 8px
+
+					&:hover
+						svg
+							fill: $accent-color
+
+				svg
+					width: 24px
+					height: 24px
+
+					fill: $text-color
+					+transition(fill)
+
+.label-active
+	font-size: 12px
+	color: $accent-color
+
+// Always in the end
 @import 'media'
