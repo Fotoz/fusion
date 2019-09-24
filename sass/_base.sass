@@ -172,12 +172,6 @@ a:hover
 		fill: $accent-color
 		+transition(fill)
 
-	&:hover
-		color: $hover-color
-
-		svg
-			fill: $hover-color
-
 	&-rotate
 		svg
 			transform: rotate(180deg)
@@ -189,7 +183,7 @@ a:hover
 	font-size: 17px
 	font-weight: 600
 	text-transform: uppercase
-	color: #232323
+	color: #232323 !important
 
 	background-color: $accent-color
 	+transition-slower(background-color)
@@ -202,12 +196,86 @@ a:hover
 
 		fill: #232323
 
-	&:hover
-		color: #232323
-		background-color: $hover-color
+// hover effects for NON TOUCH devices:
+.no-touch
+	.header
+		&-services
+			a:hover
+				color: $hover-color
 
-	&:active
-		background-color: darken($accent-color, 25)
+		&-scroll:hover
+			svg
+				fill: $hover-color
+
+	.site-logo:hover
+		color: $hover-color !important
+		border-color: $hover-color
+
+	.services-hidden-btn:hover
+		svg
+			fill: $hover-color
+
+	.footer-contacts
+		address
+			>a:hover
+				color: $hover-color
+
+		.social-links
+			a:hover
+				svg
+					fill: $hover-color
+
+	.details-link:hover
+		color: $hover-color
+
+		svg
+			fill: $hover-color
+
+	.contact-btn
+		&:hover
+			background-color: $hover-color
+
+		&:active
+			background-color: darken($accent-color, 25)
+
+// active effects for TOUCH devices:
+.touch
+	.header
+		&-services
+			a:active
+				color: $hover-color
+
+		&-scroll:active
+			svg
+				fill: $hover-color
+
+	.site-logo:active
+		color: $hover-color !important
+		border-color: $hover-color
+
+	.services-hidden-btn:active
+		svg
+			fill: $hover-color
+
+	.footer-contacts
+		address
+			>a:active
+				color: $hover-color
+
+		.social-links
+			a:active
+				svg
+					fill: $hover-color
+
+	.details-link:active
+		color: $hover-color
+
+		svg
+			fill: $hover-color
+
+	.contact-btn
+		&:active
+			background-color: $hover-color
 
 // Scrollbar customization for WebKit browsers:
 ::-webkit-scrollbar

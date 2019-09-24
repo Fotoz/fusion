@@ -18,8 +18,11 @@
 	text-align: center
 
 	h1
+		position: relative
+		z-index: 5
+
 		max-width: 750px
-		margin: 0 auto 25px
+		margin: 0 auto
 		padding: 50px 0
 
 		font-size: 55px
@@ -31,30 +34,26 @@
 			color: $accent-color
 
 	&-services
-		a
-			position: relative
+		position: relative
+		z-index: 10
 
+		margin-top: 25px
+
+		a
 			font-size: 13px
 			text-transform: uppercase
 			color: $main-color
 			+transition(color)
 
-			&:hover
-				color: $hover-color
+		span
+			position: relative
+			top: -1px
+			margin:
+				right: 10px
+				left: 10px
 
-			&:not(:last-child)
-				margin-right: 30px
-
-				&::after
-					content: ''
-					position: absolute
-					top: 2px
-					right: -17px
-
-					width: 2px
-					height: 15px
-
-					background-color: $hover-color
+			color: $accent-color
+			cursor: default
 
 	&-scroll
 		display: inline-block
@@ -68,20 +67,16 @@
 			fill: $accent-color
 			+transition(fill)
 
-		&:hover
-			svg
-				fill: $hover-color
+	.bottom-line
+		position: absolute
+		bottom: 30px
+		left: 0
+		width: 100%
 
-.bottom-line
-	position: absolute
-	bottom: 30px
-	left: 0
-	width: 100%
-
-	&-inner
-		display: flex
-		justify-content: space-between
-		align-items: center
+		&-inner
+			display: flex
+			justify-content: space-between
+			align-items: center
 
 .site-logo
 	display: inline-block
@@ -93,15 +88,11 @@
 	text-align: center
 	text-transform: uppercase
 	line-height: 42px
-	color: $accent-color
+	color: $accent-color !important
 
 	border-radius: 50%
 	border: 2px solid $accent-color
 	+transition(all)
-
-	&:hover
-		color: $hover-color
-		border-color: $hover-color
 
 //——————————————————————————————————————————————————
 // Section: Services
@@ -218,12 +209,8 @@
 				width: 40px
 				height: 40px
 
-				fill: $text-color
+				fill: $accent-color
 				+transition(fill)
-
-			&:hover
-				svg
-					fill: lighten($text-color, 25)
 
 //——————————————————————————————————————————————————
 // Section: Portfolio
@@ -715,9 +702,6 @@
 					color: $text-color
 					+transition(color)
 
-					&:hover
-						color: $accent-color
-
 			.social-links
 				margin-top: 19px
 
@@ -726,10 +710,6 @@
 
 					&:not(:last-child)
 						margin-right: 8px
-
-					&:hover
-						svg
-							fill: $accent-color
 
 				svg
 					width: 24px

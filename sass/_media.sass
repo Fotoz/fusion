@@ -34,8 +34,21 @@
 
 	// Section: Header
 	.header
-		max-height: 900px
-		padding-top: 20%
+		height: initial
+		min-height: initial
+		max-height: initial
+		padding:
+			top: 18%
+			bottom: 30px
+
+		&-services
+			margin-bottom: 120px
+
+		&-scroll
+			margin-bottom: 70px
+
+		.bottom-line
+			position: initial
 
 	// Section: Footer
 	.footer
@@ -225,14 +238,11 @@
 
 	// Section: Header
 	.header
-		min-height: 568px
+		padding-top: 30%
 
 		h1
 			padding: 40px 10px
 			font-size: 42px
-
-		&-scroll
-			margin-bottom: 10%
 
 	// Section: Services
 	.services-hidden
@@ -373,15 +383,10 @@
 
 	// Section: Header
 	.header
-		padding-top: 40px
-
 		h1
 			padding:
 				top: 20px
 				bottom: 20px
-
-		&-scroll
-			margin-bottom: 5%
 
 	// Section: Portfolio
 	.portfolio
